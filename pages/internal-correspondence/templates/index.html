@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates · Internal Correspondence · Neuroartan</title>
+  <meta name="description" content="Internal Correspondence templates index for signature, memo, and letter template classes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #050505;
+      --panel: rgba(255, 255, 255, 0.04);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --text: rgba(255, 255, 255, 0.92);
+      --muted: rgba(255, 255, 255, 0.62);
+      --soft: rgba(255, 255, 255, 0.12);
+      --max-width: 1200px;
+      --radius: 24px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      padding: 56px 24px 80px;
+      background-image:
+        radial-gradient(circle at top left, rgba(255, 255, 255, 0.06), transparent 32%),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent 28%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0));
+    }
+
+    main {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      display: grid;
+      gap: 32px;
+    }
+
+    .hero {
+      border: 1px solid var(--panel-border);
+      border-radius: calc(var(--radius) + 4px);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.025));
+      box-shadow: var(--shadow);
+      padding: 40px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      font-weight: 600;
+      max-width: 900px;
+    }
+
+    .hero-copy,
+    .card p {
+      margin: 20px 0 0;
+      max-width: 760px;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .card h2,
+    .template-card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .link-list a,
+    .template-card a {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 180ms ease, opacity 180ms ease;
+      opacity: 0.92;
+    }
+
+    .link-list a:hover,
+    .link-list a:focus-visible,
+    .template-card a:hover,
+    .template-card a:focus-visible {
+      border-color: var(--soft);
+      opacity: 1;
+      outline: none;
+    }
+
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .template-card {
+      border: 1px solid var(--panel-border);
+      border-radius: 18px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.025);
+      display: grid;
+      gap: 12px;
+    }
+
+    .template-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 980px) {
+      .grid,
+      .templates-grid {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        padding: 28px 16px 48px;
+      }
+
+      .hero,
+      .card {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Internal Correspondence · Templates</p>
+      <h1>Template route family for reusable signature, memo, and letter systems.</h1>
+      <p class="hero-copy">
+        This section organizes template-grade rendering classes across the internal correspondence architecture. It provides the bounded system surface for future reusable signatures, memos, and letters without collapsing template logic into public website routes.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Route navigation</h2>
+        <div class="link-list">
+          <a href="../">Internal Correspondence Index</a>
+          <a href="../signatures/">Signatures</a>
+          <a href="../memos/">Memos</a>
+          <a href="../letters/">Letters</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>System note</h2>
+        <p>
+          Template pages should remain reusable, modular, and future-ready for controlled document rendering. This route family is intended for communication-grade template systems that later support signature, memo, and letter page generation without structural drift.
+        </p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Template classes</h2>
+      <div class="templates-grid">
+        <article class="template-card">
+          <h3>Signature Templates</h3>
+          <p>Reusable signature-grade rendering systems for institutional, departmental, and executive communication endings.</p>
+          <a href="./signatures/">Open route</a>
+        </article>
+
+        <article class="template-card">
+          <h3>Memo Templates</h3>
+          <p>Reusable memo-grade rendering systems for directive pages, internal record structures, and controlled notices.</p>
+          <a href="./memos/">Open route</a>
+        </article>
+
+        <article class="template-card">
+          <h3>Letter Templates</h3>
+          <p>Reusable letter-grade rendering systems for formal correspondence surfaces, export-ready pages, and controlled communication outputs.</p>
+          <a href="./letters/">Open route</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
